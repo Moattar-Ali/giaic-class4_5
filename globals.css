@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.parentContainer{
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(255, 252, 252, 0.728);
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    /* align-items: center; */
+}
+.childContainer{
+    width: 250px;
+    height: 300px;
+    background-color: rgb(179, 159, 179);
+    border-radius: 20px;
+    margin: 15px;
+    padding: 15px;
+    box-shadow: rgba(16, 15, 15, 0.372)0px 4px 12px;
+    animation: golaGanda 5s ease-in infinite forwards;
+}
+
+.childContainer:hover{
+/* Visibility:hidden;
+display:none; */
+border: 5px solid purple;
+box-shadow: rgba(16, 15, 15, 0.372)0px 4px 12px;
+}
+
+.imaging{
+    width:100%;
+    height:150px;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: purple;
+}
+
+.title{
+font-size: 14px;
+margin-bottom: 10px;
+margin-top: 15px;
+}
+
+.description{
+font-size: 10px;
+}
+
+.readMore{
+    width: 50%;
+    margin-top: 10px;
+    background-color: white;
+    border:2px solid rgb(85, 1, 85);
+    border-radius: 10px;
+    padding: 5px;
+    color:blueviolet;
+
+}
+
+.readMore:hover{
+color:rgb(209,159,155);
+border: 1px solid rgb(209, 159,155);
+}
+
+@media only screen and (min-width: 500px){
+    .childContainer{
+        width:60%;
+    }
+
+}
+@media only screen and (max-width: 450px){
+    .childContainer{
+        width:90%;
+    }
+
+}
+
+@keyframes golaGanda{
+    0%{
+        border:3px solid pink;
+        /* background-color: aliceblue; */
+    }
+
+    20%{
+        border: 3px solid blue;
+    }
+    40%{
+        border: 3px solid rgb(114, 114, 178);
+    }
+    60%{
+        border: 3px solid rgb(4, 4, 61);
+    }
+    80%{
+        border: 3px solid black;
+    }
+    100%{
+        border: 3px solid yellowgreen;
+    }
+}
